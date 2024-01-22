@@ -3,6 +3,7 @@ package com.sparta.calendar.dto;
 import com.sparta.calendar.entity.Calendar;
 import lombok.Getter;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
@@ -14,7 +15,7 @@ public class CalendarResponseDto {
 
     private Long password;
 
-    private String date;
+    private LocalDate date;
 
 
     public CalendarResponseDto(Calendar calendar) {

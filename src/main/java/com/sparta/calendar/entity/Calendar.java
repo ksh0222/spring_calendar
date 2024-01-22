@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,14 +18,14 @@ public class Calendar {
 
     private Long password;
 
-    private String date;
+    private LocalDate date;
 
     public Calendar(CalendarRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
         this.password = requestDto.getPassword();
-        this.date = requestDto.getDate();
+        this.date = LocalDate.now();
     }
 
     public void update(CalendarRequestDto requestDto) {
@@ -31,4 +33,5 @@ public class Calendar {
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
     }
+
 }
