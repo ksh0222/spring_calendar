@@ -12,7 +12,7 @@ public class CalendarRequestDto {
     private String username;
     private String contents;
 
-    private Long password;
+    private String password;
     private LocalDate date;
 
 

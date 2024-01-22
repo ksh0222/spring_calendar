@@ -13,7 +13,7 @@ public class CalendarResponseDto {
     private String username;
     private String contents;
 
-    private Long password;
+    private String password;
 
     private LocalDate date;
 
@@ -25,4 +25,13 @@ public class CalendarResponseDto {
         this.contents = calendar.getContents();
         this.date = calendar.getDate();
     }
+
+    public CalendarResponseDto(Long id,String title, String username, String contents, LocalDate date) {
+        this.id = id;
+        this.title = title;
+        this.username = username;
+        this.contents = contents;
+        this.date = date;
+    }
+
 }
